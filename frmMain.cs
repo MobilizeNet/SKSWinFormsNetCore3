@@ -57,8 +57,13 @@ namespace SKS
 
 		public void mnuCustomer_Click(Object eventSender, EventArgs eventArgs)
 		{
-			frmCustomers.DefInstance.ShowDialog();
-			frmCustomers.DefInstance.InitForm();
+			try
+			{
+				frmCustomers.DefInstance.ShowDialog();
+				frmCustomers.DefInstance.InitForm();
+			}
+			catch
+			{ }
 		}
 
 		public void mnuExit_Click(Object eventSender, EventArgs eventArgs)
@@ -78,17 +83,29 @@ namespace SKS
 
 		public void mnuProducts_Click(Object eventSender, EventArgs eventArgs)
 		{
-			frmProducts.DefInstance.ShowDialog();
+			try
+			{
+				frmProducts.DefInstance.ShowDialog();
+			}
+			catch { }
 		}
 
 		public void mnuProviders_Click(Object eventSender, EventArgs eventArgs)
 		{
-			frmProviders.DefInstance.ShowDialog();
+			try
+			{
+				frmProviders.DefInstance.ShowDialog();
+			}
+			catch { }
 		}
 
 		public void mnuSecurity_Click(Object eventSender, EventArgs eventArgs)
 		{
-			frmUsersManage.DefInstance.Show();
+			try
+			{
+				frmUsersManage.DefInstance.Show();
+			}
+			catch { }
 		}
 		//UPGRADE_NOTE: (7001) The following declaration (Form_Unload) seems to be dead code More Information: https://www.mobilize.net/vbtonet/ewis/ewi7001
 		//private void Form_Unload(int Cancel)
